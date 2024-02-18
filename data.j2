@@ -1,0 +1,5 @@
+{# To collect facts about managed nodes #}
+
+The machine name is {{ ansible_nodename }}
+The machine IP is {{ ansible_facts['default_ipv4']['address'] }}
+The OS is {{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_release'] }} {{ ansible_facts['distribution_version'] }}

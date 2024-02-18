@@ -1,0 +1,15 @@
+---
+- name: Storing facts in /home/student
+  hosts: centos
+  tasks:
+    - name: Template module to store facts
+      ansible.builtin.template:
+        src: data.j2
+        dest: /home/student/data.txt
+
+
+
+    - name: Template module to generate /etc/hosts
+      ansible.builtin.template:
+        src: hosts.j2
+        dest: /etc/hosts
